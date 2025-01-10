@@ -1,10 +1,13 @@
+import Header from "./Header";
+import Main from "./Main";
+import Footer from "./Footer" ;
+
 function App() {
   return (
     <div>
- <h2>Header</h2>
-  <h2>Main
-  </h2>
-  <h2>Footer</h2>
+ <Header/>
+  <Main/>
+  <Footer/>
     </div>
    
   );
