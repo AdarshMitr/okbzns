@@ -1,6 +1,7 @@
-
 import Logo from "./img/okbzns_logo.png";
 import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { NavLink, Link } from "react-router";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,43 +19,82 @@ export default function Nav() {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-white focus:outline-none"
+            className="text-white focus:outline-none text-2xl"
           >
-            ☰
+            {isOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
 
         {/* Menu Items */}
-
-        <ul
-          className={`md:flex space-x-6 text-white font-medium ${
-            isOpen ? "block" : "hidden"
-          } md:block`}
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "active" : "")}
         >
-          <li className="hover:text-gray-200 cursor-pointer">Home</li>
-          <li className="hover:text-gray-200 cursor-pointer">About</li>
-          <li
-            className="relative"
-            onMouseEnter={() => setIsDropdownOpen(true)}
-            onMouseLeave={() => setIsDropdownOpen(false)}
+          <ul
+            className={`absolute md:static top-16 left-0 w-full md:w-auto bg-blue-600 md:bg-transparent md:flex space-x-6 text-white font-medium md:items-center transition-all duration-300 ${
+              isOpen ? "block" : "hidden"
+            }`}
           >
-            <span className="hover:text-gray-200 cursor-pointer">Services</span>
-            {isDropdownOpen && (
-              <ul className="absolute bg-white text-black shadow-lg mt-2 py-2 rounded w-40">
-                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
-                Marketing Tools
-                </li>
-                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
-                  SEO Optimization
-                </li>
-                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
-                  Web Development
-                </li>
-              </ul>
-            )}
-          </li>
-          <li className="hover:text-gray-200 cursor-pointer">Contact</li>
-        </ul>
+            <li className="p-4 md:p-0 hover:text-gray-200 cursor-pointer">
+              <Link to="/" onClick={() => setIsOpen(false)}>
+                Home
+              </Link>
+            </li>
+            <li className="p-4 md:p-0 hover:text-gray-200 cursor-pointer">
+              <Link to="/about" onClick={() => setIsOpen(false)}>
+                About
+              </Link>
+            </li>
+            <li
+              className="relative p-4 md:p-0"
+              onMouseEnter={() => setIsDropdownOpen(true)}
+              onMouseLeave={() => setTimeout(() => setIsDropdownOpen(false), 1000)}
+            >
+              <span className="hover:text-gray-200 cursor-pointer">
+                <Link to="/services" onClick={() => setIsOpen(false)}>
+                  Services
+                </Link>
+              </span>
+              {isDropdownOpen && (
+                <ul className="absolute left-0 bg-white text-black shadow-lg mt-2 py-2 rounded w-40"
+                onMouseEnter={() => setIsDropdownOpen(true)} 
+        onMouseLeave={() => setTimeout(() => setIsDropdownOpen(false), 1000)}>
+                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                    <Link
+                      to="/marketing-tools"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Marketing Tools
+                    </Link>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                    <Link to="/seo" onClick={() => setIsOpen(false)}>
+                      SEO Optimization
+                    </Link>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                    <Link
+                      to="/web-development"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Web Development
+                    </Link>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                    <Link to="/engg-solutions" onClick={() => setIsOpen(false)}>
+                      Engg. Solutions
+                    </Link>
+                  </li>
+                </ul>
+              )}
+            </li>
+            <li className="p-4 md:p-0 hover:text-gray-200 cursor-pointer">
+              <Link to="/contact" onClick={() => setIsOpen(false)}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </NavLink>
       </div>
     </nav>
   );

@@ -2,16 +2,16 @@ import React from "react";
 
 const testimonials = [
   {
-    name: "John Doe",
+    name: "Ameet B.Bhuraria",
     feedback:
       "The team provided exceptional service and helped grow our online presence tremendously.",
-    company: "ABC Corp",
+    company: "MAHESHWARI CO",
   },
   {
-    name: "Jane Smith",
+    name: "Virat Dhavan",
     feedback:
       "Highly professional and dedicated team. Their marketing tools were a game-changer!",
-    company: "XYZ Ltd",
+    company: "AJW Corporation",
   },
 ];
 
