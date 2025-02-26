@@ -1,6 +1,8 @@
 import Hero from "./Hero"
 import Nav from "./Nav"
 import Features from "./Features"
+import Testimonial from "./Testimonial"
+import StatsSection from "./StatsSection"
 function App() {
   
   return (
@@ -8,6 +10,8 @@ function App() {
       <Nav/>
        <Hero/>
        <Features/>
+       <Testimonial/>
+       <StatsSection/>
     </>
   )
 }

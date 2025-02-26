@@ -30,7 +30,7 @@ function Features () {
   return (
     <section className="bg-gray-100 py-20 text-center">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-blue-600 mb-6">Our Features</h2>
+        <h2 className="text-3xl font-bold text-blue-600 mb-6">Features</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
