@@ -1,17 +1,13 @@
-
-
+import Hero from "./Hero"
+import Nav from "./Nav"
+import Features from "./Features"
 function App() {
   
-
   return (
     <>
-      <div> <h2>
-      OKBzns- <i>Share Success,Grow Together</i>
-      </h2>
-        
-      </div>
-       
-       
+      <Nav/>
+       <Hero/>
+       <Features/>
     </>
   )
 }
