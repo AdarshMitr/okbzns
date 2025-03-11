@@ -1,4 +1,4 @@
-import Logo from "./img/okbzns_logo.png";
+import Logo from "./img/okbzns_wht.png";
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink, Link } from "react-router";
