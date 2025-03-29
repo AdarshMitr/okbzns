@@ -9,6 +9,9 @@ import { Link } from "react-router";
       transition={{ duration: 0.8 }}
       className="bg-gray-100 py-20 text-center"
     >
+
+
+      
       <div className="container mx-auto">
         <motion.h1 
           initial={{ opacity: 0, scale: 0.8 }}

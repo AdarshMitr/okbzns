@@ -8,7 +8,8 @@ export default function Nav() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <nav className="bg-[#3E5172] p-4 shadow-lg">
+    <>
+    <nav className="bg-[#3E5172] p-4 shadow-lg fixed top-0 left-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo Placeholder */}
         <div className="text-white text-xl font-bold">
@@ -97,5 +98,9 @@ export default function Nav() {
         </NavLink>
       </div>
     </nav>
+
+<div className="pt-20 md:pt-24 bg-gray-100"></div>
+</>
+
   );
 }
