@@ -1,5 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import FrontEnd from "./img/FrontEnd_Development.png";
+import UIUX from  "./img/UI_UX_Design.png";
+import Backend from "./img/Backend_Development.png";
 
 const WebDev = () => {
   return (
@@ -21,7 +24,7 @@ const WebDev = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
             <img
-              src="https://via.placeholder.com/600x400?text=Frontend+Development"
+              src={FrontEnd}
               alt="Frontend Development"
               className="w-full h-auto rounded"
             />
@@ -33,7 +36,7 @@ const WebDev = () => {
 
           <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
             <img
-              src="https://via.placeholder.com/600x400?text=Website+Design"
+              src={UIUX}
               alt="Website Design"
               className="w-full h-auto rounded"
             />
@@ -45,7 +48,7 @@ const WebDev = () => {
 
           <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
             <img
-              src="https://via.placeholder.com/600x400?text=Backend+Development"
+              src={Backend}
               alt="Backend Development"
               className="w-full h-auto rounded"
             />
